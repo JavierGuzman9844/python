@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Formulario</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 8px #fda085;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        ul {
+            background: rgba(255,255,255,0.9);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            padding: 32px 40px;
+            list-style: none;
+            font-size: 1.2rem;
+            min-width: 320px;
+        }
+        li {
+            margin-bottom: 18px;
+            padding: 10px 0;
+            border-bottom: 1px solid #fda085;
+            color: #333;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        li::before {
+            content: "✔️ ";
+            color: #f6d365;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultados del formulario</h1>
+    <ul>
+        <li>Nombre: {{ nombre }}</li>
+        <li>Correo electrónico: {{ email }}</li>
+        <li>Dirección: {{ direccion }}</li>
+        <li>Fecha: {{ fecha }}</li>
+    </ul>
+</body>
+</html>
