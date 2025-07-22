@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portafolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">Inicio</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">Acerca de</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">Mis habilidades</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Vista previa -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">Javier Guzmán</h1>
+        <p class="home__subtitle">Programador de Python y futuro CEO</p>
+      </section>
+      <!-- Acerca de mí -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">Acerca de mi</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            -Mi nombre completo es Javier Alejandro Guzmán Padilla <br><br>
+            -Me gusta mucho todo sobre el espacio <br><br>
+            -Me gusta la ciencia <br><br>
+            -Me gusta La natación <br><br>
+            -Me gusta el clima frío <br><br>
+            -Mi comida favorita es la sopa de cualquier cosa <br><br>
+            -Me gusta programar porque creamos cosas perfectas <br><br>
+            -En el curso de Python pasado hice un juego sobre zombies que me gusto mucho <br><br>
+            -Me gustan los carros mas no se mucho acerca de sus componentes <br><br>
+            -Me considero empático porque me pongo en los zapatos de los demás <br><br>
+            -Me gusta socializar y hacer más amigos <br><br>
+            -En el futuro me veo como alguien exitoso haciendo lo que me gusta y cumpliendo mis sueños <br><br>
+            -Me gustan los videojuegos por que me hacen pensar en lo logico <br><br>
+            -Me gusta cocinar mas no sea tan bueno <br><br>
+            -Soy perseverante y solidario porque me gusta ayudar a los demás <br><br>
+            -Me considero servicial y solidario <br><br>
+            -Mi materia favorita es la matematicas, computación y química <br><br>
+            -soy alguien constante en lo que me propongo <br><br>
+            -Soy alguien disciplinado y enfocado cuando me lo propongo <br><br>
+            -Mi personaje favorito es Batman y Ironman porque a pesar de que no tengan un super poder como tal, han demostrado que su intelecto y mente es mucho mas poderoso <br><br>
+          </p>
+         <img
+            class="info-block__img"
+            src="https://static0.srcdn.com/wordpress/wp-content/uploads/2023/11/iron-man-in-the-mcu.png"
+            alt="me"
+            width="650"
+            height="650"
+          />
+         
+          
+         <img
+            class="info-block__img"
+            src="https://bandai.com.mx/blog/wp-content/uploads/2019/09/Historia-de-Batman-el-superhe%CC%81roe-ma%CC%81s-popular-en-la-era-digital-copia-1.jpg"
+            alt="me"
+            width="350"
+            height="350"
+          />
+
+
+        </div>
+      </section>
+      <!-- Sección de competencias -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">MY SKILLS</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/python.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_python" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_discord" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/html.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_html" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/db.webp"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_db" value="SHOW PROJECT">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+              <a class="project__link" href="">Abierto en GitHub</a>
+          </div>
+        {% endif %}
+        {% if button_discord%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/discord_discord.png" alt="project" width="500">
+              <a class="project__link" href="">Abierto en GitHub</a>
+          </div>
+        {% endif %}
+        {% if button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/meme_html.png" alt="project" width="500">
+              <a class="project__link" href="">Abierto en GitHub</a>
+          </div>
+        {% endif %}
+        {% if button_db%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/bombillas_db.png" alt="project" width="500">
+              <a class="project__link" href="">Abierto en GitHub</a>
+          </div>
+        {% endif %}
+      </section>
+      <!-- Formulario de contacto -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">FEEDBACK</h2>
+        <form action="submit" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="Введите E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
+          </label>
+          <button class="form__button" type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+    <!-- Pie de página con enlaces a redes sociales -->
+
+    <footer>
+
+
+    {{email}}
+    {{text}}
+    </footer>
+  </body>
+</html>
